@@ -11,6 +11,17 @@ module.exports = {
         path: resolve("dist"),
         filename: "bundle.js"
     },
+    resolve: {
+        extensions: [".js", ".jsx"],
+        alias: {
+            pages: resolve("src/pages"),
+            components: resolve("src/components"),
+        }
+    },
+    // optimization: {
+    //     splitChunks: {
+    //     }
+    // },
     module: {
         rules: [{
                 test: /\.jsx?$/,

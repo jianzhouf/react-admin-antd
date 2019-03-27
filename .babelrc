@@ -6,6 +6,8 @@
                 "libraryName": "antd",
                 "style": true, // or 'css'
             }
-        ]
+        ],
+        "transform-class-properties",
+        "dynamic-import-webpack"
     ]
 }
