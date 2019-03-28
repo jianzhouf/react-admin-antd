@@ -4,12 +4,12 @@ const resolve = function (p) {
     return path.resolve(process.cwd(), p)
 }
 
+
 module.exports = {
     entry: resolve("src/index.jsx"),
-    mode: "development",
     output: {
         path: resolve("dist"),
-        filename: "bundle.js"
+        filename: "[name].[hash].js"
     },
     resolve: {
         extensions: [".js", ".jsx"],
@@ -18,10 +18,6 @@ module.exports = {
             components: resolve("src/components"),
         }
     },
-    // optimization: {
-    //     splitChunks: {
-    //     }
-    // },
     module: {
         rules: [{
                 test: /\.jsx?$/,
@@ -46,15 +42,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: resolve("src/index.html")
-        })
+        }),
     ],
-    devServer: {
-        contentBase: resolve("dist"),
-        port: 8888,
-        compress: true,
-        hot: true,
-        open: true,
-        progress: true,
-        stats: 'minimal',
-    }
 }

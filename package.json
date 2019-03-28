@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.js"
+    "dev": "webpack-dev-server --config script/dev.js",
+    "build": "webpack --config script/prd.js",
+    "analyze": "webpack --config script/webpack.analyze.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,8 +23,10 @@
     "less-loader": "^4.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
+    "webpack-bundle-analyzer": "^3.1.0",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1"
   },
   "dependencies": {
     "antd": "^3.15.2",

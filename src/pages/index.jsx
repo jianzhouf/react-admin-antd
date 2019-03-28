@@ -1,17 +1,52 @@
 import React from "react"
-import { Menu, Icon,Button } from 'antd';
+import { Menu, Icon, Button, Modal } from 'antd';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 export default class IndexPage extends React.Component {
+
+    state = { visible: false }
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    }
+
+    handleOk = (e) => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    }
+
+    handleCancel = (e) => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    }
     handleClick = () => {
         this.props.history.push("/test");
+    }
+    componentDidMount() {
+        const a = { a: 1 }
+        console.log({ ...a, b: 1 })
     }
     render() {
 
 
         return <div>
-            <Button>21312</Button>
+            <Button onClick={this.showModal}>21312</Button>
+            <Modal
+                title="Basic Modal"
+                visible={this.state.visible}
+                onOk={this.handleOk}
+                onCancel={this.handleCancel}
+            >
+                <p>Some contefdsnts...</p>
+                <p>Some contes123...</p>
+                <p>Some contents...</p>
+            </Modal>
             <Menu
                 onClick={this.handleClick}
                 style={{ width: 256 }}
