@@ -1,0 +1,56 @@
+@headerHeight: 3rem;
+
+.z-admin {
+    &-layout {
+        display: flex;
+        background: #f0f2f5;
+    }
+
+    &-aside {
+        position: relative;
+        height: 100vh;
+        background: #001529;
+
+        &-header {
+            box-sizing: border-box;
+            height: @headerHeight;
+            line-height: 3rem;
+            background: #001529;
+            color: #fff;
+            padding-left: 1rem;
+            font-size: 1.5rem;
+
+
+        }
+    }
+
+    &-main {
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+
+        &-header {
+            height: @headerHeight;
+            background: #fff;
+            box-shadow: 0 1px 5px #ddd;
+
+            &-collapse {
+                display: inline-block;
+                height: @headerHeight;
+                line-height: @headerHeight;
+                width: @headerHeight;
+                text-align: center;
+                font-size: 1.2rem;
+
+                &:hover {
+                    background: rgba(0, 0, 0, .025);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-container {
+            padding: 1rem;
+        }
+    }
+}

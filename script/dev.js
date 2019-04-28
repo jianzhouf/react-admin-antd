@@ -11,7 +11,7 @@ module.exports = webpackMerge(base, {
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],
-    // devtool: 'eval',
+    devtool: 'inline-source-map',
     devServer: {
         contentBase: resolve("dist"),
         port: 8888,

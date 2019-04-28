@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npm run dev",
     "dev": "webpack-dev-server --config script/dev.js",
     "build": "webpack --config script/prd.js",
     "analyze": "webpack --config script/webpack.analyze.js"
@@ -17,10 +18,12 @@
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-plugin-import": "^1.11.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.5.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-bundle-analyzer": "^3.1.0",
@@ -30,6 +33,9 @@
   },
   "dependencies": {
     "antd": "^3.15.2",
+    "axios": "^0.18.0",
+    "g2": "^2.3.13",
+    "g2-react": "^1.3.2",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-loadable": "^5.5.0",

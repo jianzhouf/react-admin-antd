@@ -1,5 +1,5 @@
-import React from "react";
-import { Spin } from 'antd';
+import React from "components/node_modules/react";
+import { Spin } from 'components/node_modules/antd';
 import "components/style/loading.less"
 export default class Loading extends React.Component {
     render(){
